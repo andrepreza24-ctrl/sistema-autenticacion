@@ -1,36 +1,23 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sistema de Autenticación Segura (Next.js 16 + Supabase SSR)
 
-## Getting Started
+Proyecto desarrollado para implementar autenticación robusta mediante Server Actions, Cookies `httpOnly` y Middleware en Next.js App Router.
 
-First, run the development server:
+## 🚀 Tecnologías utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js 16+** (App Router)
+- **TypeScript**
+- **Supabase Authentication & Database** (`@supabase/ssr`)
+- **Tailwind CSS**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛡️ Características de Seguridad
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Cookies httpOnly & SameSite:** Gestión de tokens delegada completamente a `@supabase/ssr` con cookies no accesibles desde JavaScript client-side.
+2. **Middleware de Protección:** Interceptación y redefinición de rutas privadas (`/dashboard`) y redirección de usuarios autenticados fuera del flujo de autenticación.
+3. **Validación en Server Actions:** Procesamiento seguro de credenciales en el servidor sin exponer secretos en el cliente.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Instalación y Configuración
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clonar el repositorio:
+   ```bash
+   git clone <URL_DE_TU_REPOSITTORIO>
+   cd mi-sistema-autenticacion
